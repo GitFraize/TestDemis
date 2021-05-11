@@ -23,7 +23,7 @@
 		$news[$i]=$row;
 		$content=substr($row['content'],0,600);
 		$content=substr($content, 0, strrpos($content, ' ' ))." ";
-		echo "<div class=\"news-item\"><h1>".$row['title']."</h1><p class=\"newsitem-info\">Дата размещения: ".date('d/m/Y',strtotime($row['pubDate']))."&#160&#160&#160 Автор: ".$row['author']."</p>".$content."<a href=\"news.php\">Перейти к новости...</a></div>";
+		echo "<div class=\"news-item\"><h1>".$row['title']."</h1><p class=\"newsitem-info\">Дата размещения: ".date('d/m/Y',strtotime($row['pubDate']))."&#160&#160&#160 Автор: ".$row['author']."</p>".$content."<a href=\"newsitem.php?id=".$row['id']."\">Перейти к новости...</a></div>";
 	}
 ?>	
 		</div>
